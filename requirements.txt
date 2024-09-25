@@ -1,0 +1,8 @@
+asgiref==3.8.1
+Django==5.0.7
+-e git+https://github.com/jazzband/django-debug-toolbar.git@8f4fa8e7f0a5ddc539f98fb2767b17fd568732d3#egg=django_debug_toolbar
+gunicorn==23.0.0
+packaging==24.1
+python-dotenv==1.0.1
+sqlparse==0.5.0
+whitenoise==6.7.0

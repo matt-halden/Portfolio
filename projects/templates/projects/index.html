@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Matt Halden Portfolio - Projects Page" />
+        <meta name="author" content="Matt Halden" />
+        <title>Matt Halden's Projects</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'projects/images/hat-wizard-solid.svg' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'projects/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">
+                <span class="d-block d-lg-none">Matt Halden</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'projects/images/haldenprofile.png' %}" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#thisapp">This App</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#auth0">Auth0</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#python">Python</a></li>
+                    <!-- Return Home -->
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}" class="nav-link js-scroll-trigger">Go Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- Projects Home-->
+            <section class="resume-section" id="home">
+                <div class="resume-section-content">
+                    <h1 class="mb-2">
+                        Matt
+                        <span class="text-primary">Halden</span>
+                        <a class="text-primary" href="{% url 'index' %}"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+                    </h1>
+                    <p class="lead mb-3">Welcome to my projects page. Here you will find a plethora of my projects & what I work on.
+                        You can navigate each section through the navbar on the left.</p>
+                    <p class="lead mb-3"> I divided up this in three sections: work projects, side (typically python) projects & self-learning.</p>
+                    <p class="lead mb-3">Enjoy!</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/matt-halden"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/matt-halden"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="mailto:just.m.halden@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- This App -->
+            <section class="resume-section" id="thisapp">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">This Web App</h2>
+                    <div class="mb-2">
+                        <h4 class="d-inline">Description</h4><span class="ms-1"> I built this website to showcase my technical interests
+                    and provide a place for me to grow as I showcase my work. This is built in Django with a free bootstrap template I found. </span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Topics</h4><span class="ms-1"> Web Framework (Backend Framework),
+                        Fronted Development (HTML, CSS, JS), Hosting & Deployment, Software Development Lifecycle (SDLC) </span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Stack</h4><span class="ms-1"> Django Backend (w/ SQLite), Bootstrap Frontend, Heroku</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Github Repos</h4><span class="ms-1"></span>
+                    </div>
+                    <ul class="fa-ul mb-3">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Matt Halden Portfolio Website
+                            <a class="text-primary" href="https://github.com/matt-halden/Portfolio">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                    </ul>
+                    <div class="text-center mb-4" style="max-width: 100%;">
+                        <img class="img-fluid gallery-item" src="{% static 'halden-web/images/thisapp_2.png' %}" alt="old A0 Django"
+                             style="max-width: 75%; border: 1px solid lightgray;"/>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- auth0-->
+            <section class="resume-section" id="auth0">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Auth0</h2>
+                    <div class="mb-2">
+                        <h4 class="d-inline">Description</h4><span class="ms-1"> At the time of making this app,
+                        I do work at Okta where my focus has recently shifted to <a class="text-primary" href="https://auth0.com/">Auth0</a>.
+                        Auth0 is <strong>the</strong> (debately) industry leading Customer Identity & Access Management (CIAM) platform. Yes, it
+                        is a "security" platform. However, it enables elite product execution by increasing customer retention & growth through a secure & slick
+                        customer experience. It does this as it touches a variety of business units: software engineering, product, marketing,
+                        security & sometimes more. If one implements Auth0, one will quickly realize it is made for developers, which is where my attraction
+                        to it fostered. My current role graciously enables me to engineer alongside this great product. How I showcase my skills is by
+                        expanding upon our <a class="text-primary" href="https://auth0.com/docs/quickstart/webapp/django/01-login">Django SDK</a>.
+                        This SDK simple starts with just a home page and login button that simply redirects to Auth0's hosted sign-in/sign-up page
+                        "Universal Login" and returns an ID & Access token (OIDC, OAuth). I have expanded on this by making this SDK more presentable
+                        (the home page of the SDK is only 18 lines of html...) and adding much more Auth0 functionality than simple username/password login: multi-tenancy via Organizations, multiple client apps, customizing claims on returned tokens
+                        (RBAC, sync'd user profile info, business context), inbound federation, sessions, progressive profiling, contextualizing MFA, etc.
+                        The functionality exposed is all publicly available on <a class="text-primary" href="https://auth0.com/docs"> Auth0's documentation</a>.</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Topics</h4><span class="ms-1"> Web Frameworks, Customer Identity (OIDC, OAuth, SAML, SCIM),
+                        JWTs (JSON Web Tokens), M2M (Machine-to-Machine/API Security), FGA (Fine Grained Authorization), RBAC, Session Management, Inbound Federation, MFA, multi-tenancy</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Stack</h4><span class="ms-1"> Django Backend (w/ SQLite), Bootstrap Frontend, Auth0, Heroku</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Auth0 Functionality</h4><span class="ms-1"> Auth0 Actions, Organizations (multi-tenancy),
+                        Self-Service SSO, Enterprise Connections, Inbound SCIM, MFA, Auth0 Forms, authentication types (Social Login/Inbound SSO/Passwordless/username-passwords), Attack Protection, Account Linking</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Github Repos</h4><span class="ms-1"></span>
+                    </div>
+                    <ul class="fa-ul mb-3">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Matt Halden Auth0 Django SDK
+                            <a class="text-primary" href="https://github.com/matt-halden/mh-a0-django">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Visit it live here
+                            <a class="text-primary" href="https://halden0-323d4b292113.herokuapp.com/">
+                            <i class="fa-solid fa-arrow-right"></i></a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-start align-items-center" style="max-width: 100%;">
+                        <img class="img-fluid gallery-item" src="{% static 'halden-web/images/a0django1.png' %}" alt="old A0 Django"
+                             style="max-width: 45%; border: 1px solid lightgray;"/>
+                        <h2><a class="text-primary mx-2"><i class="fa-solid fa-arrow-right"></i></a></h2>
+                        <img class="img-fluid gallery-item ms-2" src="{% static 'halden-web/images/a0django_app.png' %}" alt="new A0 Django"
+                             style="max-width: 45%; border: 1px solid lightgray;"/>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Python -->
+            <section class="resume-section" id="python">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Python Mega Course on Udemy
+                        <a class="text-primary" href="https://www.udemy.com/course/the-python-mega-course/">
+                            <i class="fa-solid fa-link"></i></a></h2>
+                    <div class="mb-2">
+                        <h4 class="d-inline">Description</h4><span class="ms-1"> This Python mega course
+                        I am working through is to refresh the python I knew while getting a broad overview of a
+                        <strong>LOT</strong> of topics. It consists of building ~20 apps over 52 hours of videos. Below are links
+                        to each app I built with the class & pushed to GitHub. As class completion is in-progress, adding the
+                        GitHub repos below is to exemplify my current progress and proof of participation.</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Topics</h4><span class="ms-1"> Object Detection, Natural Language Processing (NLP),
+                        Sentiment Analysis, Data Parsing & Manipulation, Data Visualization, REST APIs, Email Sending, PDF Generation, Web Frameworks</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Libraries</h4><span class="ms-1"> scikit-learn, Django, nltk, re (ReGex),
+                        cv2 (OpenCV), NumPy, Pandas, plotly.express, requests, glob, os, smtplib</span>
+                    </div>
+                    <div class="mb-2">
+                        <h4 class="subheading d-inline">Github Repos</h4><span class="ms-1"></span>
+                    </div>
+                    <ul class="fa-ul mb-3">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 9</strong>: Webcam Object Detection App
+                            <a class="text-primary" href="https://github.com/matt-halden/webcam-object-detection">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 8</strong>: Natural Language Processing Overview
+                            <a class="text-primary" href="https://github.com/matt-halden/nlp-overview">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 7</strong>: Weather Forecast Dashboard (APIs, Data Parsing & Manipulation, GUI)
+                            <a class="text-primary" href="https://github.com/matt-halden/weather-forecasting-app">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 6</strong>: Building a Weather API
+                            <a class="text-primary" href="https://github.com/matt-halden/weather-api">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 5</strong>: Daily News Digest (API, Data Parsing)
+                            <a class="text-primary" href="https://github.com/matt-halden/news-api">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 3/4</strong>: PDF Invoice Generator
+                            <a class="text-primary" href="https://github.com/matt-halden/pdf-generator">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 2</strong>: Showcase Website with Streamlit
+                            <a class="text-primary" href="https://github.com/matt-halden/streamlit-portfolio">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <strong>App 1</strong>: To-do App (Python Basics)
+                            <a class="text-primary" href="https://github.com/matt-halden/to-do-app">
+                            <i class="fa-solid fa-link"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'projects/js/scripts.js' %}"></script>
+    </body>
+</html>

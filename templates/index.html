@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Matt Halden Portfolio website" />
+        <meta name="author" content="Matt Halden" />
+        <title>Matt Halden</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'halden-web/images/hat-wizard-solid.svg' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'halden-web/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top sidebar" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Matt Halden</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'halden-web/images/haldenprofile.png' %}" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#welcome">Welcome</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#projects">
+                            Projects
+                            <span class="icon-container">
+                                <a class="text-black" href="{% url 'projects:index' %}">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- Welcome-->
+            <section class="resume-section" id="welcome">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Matt
+                        <span class="text-primary">Halden</span>
+                    </h1>
+                    <p class="lead mb-5">Welcome to my site!</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/matt-halden"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/matt-halden"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="mailto:just.m.halden@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- About -->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">About</h2>
+                    <div class="subheading mb-3">Hello</div>
+                    <p>I go by Matt, and this is my website. This is my little space I created to showcase my interests, projects and explore my technical curiousities. </p>
+                    <p class="mb-3">At the time of writing this, I am in the midst of creating this website. This website is not to flex my elite developer skills;
+                        rather, it is to show what goes beyond the one-sided, 8.5x11 piece of paper submitted to every job application.</p>
+                    <div class="subheading mb-3">How</div>
+                    <p>Depsite my foundation in electrical engineering where I took lower-level programming classes such as Verilog, I built this with the
+                        Django web framework. During my time securing my EE degree, I had many
+                        lower level programming classes before my university offered "Python for Electrical Engineers" my last year (finally).
+                        Hence, my pure software background started with Python (and why this website is built with Django, for starters).</p>
+                    <p class="mb-3">From there, this site is leveraging a free bootstrap template to make everything pretty.</p>
+                    <div class="subheading mb-3">Format</div>
+                    <p>A couple formatting notes for this Django App. You are currently on the homepage where you may explore a bit about me,
+                        my skills & general experience. You can click the Projects tab or black arrow at the bottom to find my project portfolio.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills -->
+             <!-- Testing branching -->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <h4 class="mb-2">Programming Languages & Tools</h4>
+                    <div class="subheading mb-2">Proficient</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django" height="40"/>
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="{% static 'halden-web/images/oauth.svg' %}" alt="OAuth" style="width: 48px; height: 48px;" />
+                        </li>
+                        <li class="list-inline-item"><i class="fab fa-openid"></i></li>
+                        <li class="list-inline-item">
+                            <img src="{% static 'halden-web/images/saml-color.svg' %}" alt="SAML" style="width: 48px; height: 48px;" />
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="https://aws-icons-mh.s3.us-east-2.amazonaws.com/auth0.svg" alt="Auth0" height="40"/>
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/okta/okta-original.svg" alt="Okta" height="40"/>
+                        </li>
+                    </ul>
+                    <div class="subheading mb-2">Knowledgable</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item">
+                            <img src="{% static 'halden-web/images/nextjs.svg' %}" alt="next.js" style="width: 74px; height: 74px;" />
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" height="55"/>
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="{% static 'halden-web/images/EC2.svg' %}" alt="AWS EC2" style="width: 48px; height: 48px;" />
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="{% static 'halden-web/images/amazon-s3.svg' %}" alt="AWS S3" style="width: 48px; height: 48px;" />
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="{% static 'halden-web/images/heroku-icon.svg' %}" alt="Heroku" style="width: 48px; height: 48px;" />
+                        </li>
+                    </ul>
+                    <h4 class="mb-3">Topics</h4>
+                                        <div class="subheading mb-2">Security (Authentication & Authorization)</div>
+                    <ul class="fa-ul mb-3">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Concepts: IAM (identity & access management) - Zero Trust Architecture, Single Sign-On, MFA, FGA (Fine Grained Authorization), RBAC/ABAC/ReBAC,
+                            Sessions, MDMs, user provisioning (HRiS, "Lifecycle Management"), M2M (Machine-to-Machine/API Security)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Protocols: OAuth 2.0, OIDC (OpenID Connect), SAML 2.0,
+                            SCIM (System for Cross-domain Identity Management)
+                        </li>
+                    </ul>
+                    <div class="subheading mb-2">Python</div>
+                    <ul class="fa-ul mb-3">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Concepts: Data visualization, Data Parsing & Manipulation, Object Detection,
+                            Natural Language Processing
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Proficient: NumPy, pandas, requests, glob
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Knowledgable: scikit-learn, Django, nltk, re (ReGex), cv2 (OpenCV)
+                        </li>
+                    </ul>
+                    <div class="subheading mb-2">Hardware</div>
+                     <ul class="fa-ul mb-3">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            General Experience: Analog Signal Chain & Power, Wireless connectivity (Sub-1GHz, BLE), Computer Vision, DLP (Digital Light Projection)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Embedded: Verilog, Assembly, C++
+                        </li>
+                    </ul>
+                    <div class="subheading mb-2">Soft Skills</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Emotional Intelligence, Strategic Communication, Technical Sales, Leadership, Organization
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Resume-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="subheading mb-4"><span class="text-primary">Work</span></div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Solutions Engineer</h3>
+                            <div class="subheading mb-3">Okta</div>
+                            <p>Orchestrate product demonstrations and proof-of-concepts for C-Level Executives, Software Developers,
+                                Security teams & Product Managers while conducting cross-functional strategy alongside internal Sales, Product,
+                                Engineering & Professional Services teams to drive technical wins for customers’ needs.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2022 - Present | Seattle, WA - Phoenix, AZ</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Technical Sales Representative</h3>
+                            <div class="subheading mb-3">Texas Instruments</div>
+                            <p>Owned full (pre & post-sales) account strategy to drive net revenue growth for R&D divisions at a top 10 major account,
+                                closing $76M in 2025 from $6.6M in 2021. Projects covered involved camera vision,
+                                digital light projection (DLP), mmWave (radar) and analog signal chain & power. </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2019 - July 2022 | Seattle, WA</span></div>
+                    </div>
+                    <div class="subheading mb-4"><span class="text-primary">Education</span></div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Barrett, the Honors College - Arizona State University</h3>
+                            <div class="subheading mb-3">Bachelor of Science - Electrical Engineering</div>
+                            <p>GPA: 3.78</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2015 - May 2019 | Tempe, AZ</span></div>
+                    </div>
+                    <div class="subheading mb-4"><span class="text-primary">Self Learning</span></div>
+<!--                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">-->
+<!--                        <div class="flex-grow-1">-->
+<!--                            <h3 class="mb-0">Example Coursework</h3>-->
+<!--                            <div class="subheading mb-3">Example</div>-->
+<!--                        </div>-->
+<!--                        <div class="flex-shrink-0"><span class="text-primary">July 2022 - Present | Seattle, WA - Phoenix, AZ</span></div>-->
+<!--                    </div>-->
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Okta Certified Professional, Admin & Consultant</h3>
+                            <div class="subheading mb-3"><a class="text-primary" href="https://www.okta.com/services/certification/">Okta Certifications Page</a></div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2022 - July 2023</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects
+                        <a class="text-primary" href="{% url 'projects:index' %}"><i class="fa-solid fa-arrow-right"></i></a></h2>
+                    <p>At work and in my spare time, I let my innate imagination take the wheel. By clicking
+                    the <a class="text-primary" href="{% url 'projects:index' %}">linked arrow above</a> or the link icon next to the Project title will take
+                    you there.</p>
+                    <p class="mb-0">This projects page will show you more about me behind the scenes. Lately, I have really
+                        enjoyed my shift to software, so much so that it dictates my spare times' focus to working towards synchronizing
+                        my personal passions with software.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'halden-web/js/scripts.js' %}"></script>
+    </body>
+</html>
