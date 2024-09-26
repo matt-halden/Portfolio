@@ -34,6 +34,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["www.mhalden.com", "mhalden.com", "mhalden-252c260ccb4e.herokuapp.com", "127.0.0.1", "localhost"]
 
+# Force HTTPS for Prod
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 
 # Application definition
 
